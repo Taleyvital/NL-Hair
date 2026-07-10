@@ -227,6 +227,23 @@ export const contactSection = {
 /*  NAVIGATION                                                                  */
 /* -------------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------------- */
+/*  CRÉDIT / SIGNATURE (footer)                                                 */
+/* -------------------------------------------------------------------------- */
+
+export const credit = {
+  label: "Développé par",
+  name: "Webey Agency",
+  url: "https://webey-agency-elevate.vercel.app/",
+  // Déposez le logo ici : /public/images/webey-agency-logo.png
+  logo: "/images/webey-agency-logo.png",
+  logoAlt: "Webey Agency",
+};
+
+/* -------------------------------------------------------------------------- */
+/*  NAVIGATION                                                                  */
+/* -------------------------------------------------------------------------- */
+
 export const navLinks = [
   { label: "Prestations", href: "#prestations" },
   { label: "Galerie", href: "#galerie" },

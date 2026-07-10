@@ -1,4 +1,5 @@
-import { contact, navLinks, whatsappUrl } from "@/lib/content";
+import Image from "next/image";
+import { contact, credit, navLinks, whatsappUrl } from "@/lib/content";
 import {
   FacebookIcon,
   InstagramIcon,
@@ -93,8 +94,32 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-line pt-6 text-center text-xs font-light text-ink-soft">
-          © {year} {contact.brand}. Tous droits réservés.
+        <div className="mt-12 flex flex-col items-center gap-5 border-t border-line pt-6 sm:flex-row sm:justify-between">
+          <p className="text-xs font-light text-ink-soft">
+            © {year} {contact.brand}. Tous droits réservés.
+          </p>
+
+          {/* Crédit — logo cliquable vers le site de l'agence */}
+          <a
+            href={credit.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${credit.label} ${credit.name}`}
+            className="group flex items-center gap-3"
+          >
+            <span className="text-xs font-light uppercase tracking-widest2 text-ink-soft">
+              {credit.label}
+            </span>
+            <span className="flex items-center rounded-md bg-ink px-3 py-2 transition-transform group-hover:scale-105">
+              <Image
+                src={credit.logo}
+                alt={credit.logoAlt}
+                width={112}
+                height={40}
+                className="h-6 w-auto"
+              />
+            </span>
+          </a>
         </div>
       </div>
     </footer>
